@@ -1,6 +1,10 @@
-function trocarDiv(nome, idade) {
-    var area = document.getElementById("area");
-    var texto = prompt ("Qual seu sobrenome?");
+function adicionarIngrediente() {
+    var ing = document.getElementById("ingrediente").value;
+    
+    var listahtml = document.getElementById("lista").innerHTML;
+    
+    listahtml = listahtml + "<li>" + ing + "</li>";
 
-    area.innerHTML = nome+" "+texto+" tem "+idade+" anos";
+    document.getElementById("lista").innerHTML = listahtml;
+
 }
