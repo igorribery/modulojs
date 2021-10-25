@@ -1,10 +1,8 @@
-function adicionarIngrediente() {
-    var ing = document.getElementById("ingrediente").value;
-    
-    var listahtml = document.getElementById("lista").innerHTML;
-    
-    listahtml = listahtml + "<li>" + ing + "</li>";
+function somar(){
+    var campo1 = parseInt(document.getElementById("campo1").value);
+    var campo2 = parseInt(document.getElementById("campo2").value);
 
-    document.getElementById("lista").innerHTML = listahtml;
-
+    var soma = campo1 + campo2;
+    
+    alert(soma);
 }
