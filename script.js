@@ -1,8 +1,10 @@
-function somar(){
-    var campo1 = parseInt(document.getElementById("campo1").value);
-    var campo2 = parseInt(document.getElementById("campo2").value);
+function testVerificador() {
+    var x = prompt("Diga um numero:");
 
-    var soma = campo1 + campo2;
-    
-    alert(soma);
+    if (x > 10) {
+        alert("E maior que 10!!!");
+    } else {
+        alert("Não é maior que 10!");
+    }
+
 }
