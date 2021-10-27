@@ -1,11 +1,4 @@
-var x = 0;
+for(x = 0; x < 10; x++) {
 
-document.write("Iniciando o Loop...<br/>");
-while(x < 10) {
-
-    document.write("Numero: "+x+"<br/>");
-    
-    x++;
+    document.write("Numero "+x+"<br/>");
 }
-
-document.write("Finalizando o Loop...<br/>");
