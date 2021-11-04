@@ -3,24 +3,18 @@
     <head>
         <title>Pagina teste</title>
         <script type="text/javascript" src="script.js"></script>
-        <style>
-   
+        <style type="text/css">
+            .bola {
+                width: 50px;
+                height: 50px;
+                background-color: #000000;
+                border-radius: 25px;
+                position: absolute;
+            }
         </style>
     </head>
-    <body>
+    <body onload="iniciar()">
     
-        <form method="POST">
-            <input type="text" name="nome" onfocus="focou()" onblur="desfocou()" /><br/><br/>
-
-            <select name="cidade" onchange="mudouOpcao(this)">
-                <option>São Paulo</option>
-                <option>Rio de Janeiro</option>
-                <option>Belo Horizonte</option>
-                <option>Recife</option>
-            </select><br/><br/>
-
-            <input type="submit" value="Enviar" />
-        </form>
 
     </body>
 
