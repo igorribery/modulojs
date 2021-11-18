@@ -4,17 +4,15 @@
         <title>Pagina teste</title>
         <script type="text/javascript" src="script.js"></script>
         <style type="text/css">
-            .bola {
-                width: 50px;
-                height: 50px;
-                background-color: #000000;
-                border-radius: 25px;
-                position: absolute;
-            }
         </style>
     </head>
-    <body onload="iniciar()">
-    
+    <body>
+        <form method="POST" onsubmit="return validar()">
+            Digite um número de 2 algarismos:<br/>
+            <input text="text" name="numero" id="numero" /><br/><br/>
+
+            <input type="submit" value="Enviar" />
+        </form>
 
     </body>
 

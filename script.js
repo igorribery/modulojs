@@ -1,17 +1,12 @@
-function addBola() {
-    var bola = document.createElement("div");
-    bola.setAttribute("class", "bola");
+function validar() {
+    var valor = document.getElementById("numero").value;
 
-    var p1 = Math.floor(Math.random() * 500);
-    var p2 = Math.floor(Math.random() * 400);
-    bola.setAttribute("style", "left:"+p1+"px;top:"+p2+"px;");
-    bola.setAttribute("onclick", "estourar(this)");
+    if(valor.length > 2) {
+        alert("Você digitou um número que tem mais de 2 algarismo.");
+        return false;
+    } else {
+        return true;
+    }
 
-    document.body.appendChild(bola);
-}
-function estourar(elemento) {
-    document.body.removeChild(elemento);
-}
-function iniciar() {
-    setInterval(addBola, 2000);
+
 }
