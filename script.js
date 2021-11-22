@@ -1,12 +1,15 @@
-function validar() {
-    var valor = document.getElementById("numero").value;
-
-    if(valor.length > 2) {
-        alert("Você digitou um número que tem mais de 2 algarismo.");
-        return false;
-    } else {
-        return true;
-    }
-
+function Animal() {
+    this.raca = "Cao";
+    this.nome = "Lulu";
+    this.idade = "5";
+    this.peso = "10";
 
 }
+
+var lulu = new Animal();
+lulu.raca = "Gato";
+lulu.nome ="Lulu;"
+
+var xuxu = new Animal();
+xuxu.raca ="Cao";
+xuxu.nome ="Xuxu";
