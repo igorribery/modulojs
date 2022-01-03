@@ -1,7 +1,11 @@
-if (typeof localStorage.nome == "undefined") {
-    localStorage.nome = prompt ("Qual seu nome?");
+let nome = 'Igor Ribeiro dos Santos';
+
+let resultado = '';
+
+if(nome.indexOf('Santos') > -1) {
+    resultado = 'Achou!';
+} else {
+    resultado = 'Não achou!';
 }
 
-var nome = localStorage.nome;
-
-document.getElementById("info").innerHTML = localStorage.nome;
+console.log(resultado);
