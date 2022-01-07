@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset ="UTF-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pagina teste</title>
-        <style type="text/css">
-        </style>
+        <link rel="stylesheet" href="estilo.css" />
+    
     </head>
     <body>
-        <h1 id="titulo">Seja bem vindo(a)</h1>
-        <div class="demo"></div>
+            <img src="images/cachorro.jpg" data-animal="Cachorro" class="imagem" /> <br>
 
-        <script src="script.js"></script>
+            <button onclick="trocarImagem('cachorro.jpg', 'Cachorro')">Cachorro</button>
+            <button onclick="trocarImagem('gato.jpg', 'Gato')">Gato</button>
+
+            <button onclick="pegarAnimal()">Qual é o animal?</button>
+
+
+        <script type="text/javascript" src="script.js"></script>
     </body>
 
 </html>

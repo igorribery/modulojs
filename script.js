@@ -1,11 +1,9 @@
-let nome = 'Igor Ribeiro dos Santos';
-
-let resultado = '';
-
-if(nome.indexOf('Santos') > -1) {
-    resultado = 'Achou!';
-} else {
-    resultado = 'Não achou!';
+function trocarImagem(filename, animalname) {
+    document.querySelector('.imagem').setAttribute('src', 'images/'+filename);
+    document.querySelector('.imagem').setAttribute('data-animal', animalname);
 }
 
-console.log(resultado);
+function pegarAnimal() {
+    let animal = document.querySelector('.imagem').getAttribute('data-animal');
+    alert(animal);
+}
