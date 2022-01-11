@@ -1,9 +1,13 @@
-function menuToggle() {
-    let menu = document.getElementById('menu-area');
+let dia = 7;
+let diaNome = '';
 
-    if(menu.style.width == '200px') {
-        menu.style.width = '0px';
-    } else {
-        menu.style.width = '200px';
-    }
+switch(dia) {
+    case 6:
+    case 7:
+        diaNome = 'Final de semana';
+        break
+    default:
+        diaNome = 'Dia de semana';
+        break; 
 }
+document.getElementById("dia").innerHTML = "Hoje é: "+diaNome;
