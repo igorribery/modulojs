@@ -1,13 +1,16 @@
-let dia = 7;
-let diaNome = '';
+// FOR LOOP
+// FOR LOOP ARRAY
 
-switch(dia) {
-    case 6:
-    case 7:
-        diaNome = 'Final de semana';
-        break
-    default:
-        diaNome = 'Dia de semana';
-        break; 
+
+let carros = [ 'Ferrai', 'Fusca', 'Palio', 'Corolla' ];
+
+let html = '<ul>';
+
+for(let i in carros) {
+    html += '<li>'+ carros[i] +'</li>';
 }
-document.getElementById("dia").innerHTML = "Hoje é: "+diaNome;
+
+html += '</ul>'
+
+
+document.getElementById("demo").innerHTML = html;
