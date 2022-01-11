@@ -2,15 +2,10 @@
 // FOR LOOP ARRAY
 
 
-let carros = [ 'Ferrai', 'Fusca', 'Palio', 'Corolla' ];
+let num = '';
 
-let html = '<ul>';
-
-for(let i in carros) {
-    html += '<li>'+ carros[i] +'</li>';
+for(let i = 0; i < 50; i++) {
+        num = num + i + '<br/>';
 }
 
-html += '</ul>'
-
-
-document.getElementById("demo").innerHTML = html;
+document.getElementById('demo').innerHTML = num;
