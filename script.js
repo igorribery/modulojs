@@ -1,11 +1,3 @@
-// FOR LOOP
-// FOR LOOP ARRAY
+let novoValor = Math.floor(Math.random()* 100);
 
-
-let num = '';
-
-for(let i = 0; i < 50; i++) {
-        num = num + i + '<br/>';
-}
-
-document.getElementById('demo').innerHTML = num;
+console.log(novoValor);
