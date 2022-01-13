@@ -1,3 +1,18 @@
-let novoValor = Math.floor(Math.random()* 100);
+let timer;
 
-console.log(novoValor);
+function comecar() {
+    timer = setInterval(showTime);
+}
+function parar(){
+    clearTimeout(timer);
+}
+
+function showTime() {
+    let d = new Date();
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+    let txt = h+':'+m+':'+s;
+
+    document.querySelector('.demo').innerHTML = txt;
+}
