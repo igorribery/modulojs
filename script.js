@@ -1,18 +1,9 @@
 let timer;
-
-function comecar() {
-    timer = setInterval(showTime);
+function rodar() {
+    timer = setTimeout(function(){
+        document.querySelector('.demo').innerHTML = 'Rodou!';
+    }, 2000);
 }
-function parar(){
+function parar() {
     clearTimeout(timer);
-}
-
-function showTime() {
-    let d = new Date();
-    let h = d.getHours();
-    let m = d.getMinutes();
-    let s = d.getSeconds();
-    let txt = h+':'+m+':'+s;
-
-    document.querySelector('.demo').innerHTML = txt;
 }
