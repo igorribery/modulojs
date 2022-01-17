@@ -1,20 +1,24 @@
-let pessoa = {
-    nome: 'Bonieky',
-    sobrenome: 'Lacerda',
-    idade: 90,
-    social: {
-        facebook: 'b7web',
-        instagram: {
-            url: '@Bonieky',
-            seguidores: 1000
-        }
-    },
-};
-
-function pegarNomeCompleto({nome, sobrenome = 'Silva', social:{instagram:{url:instagram}}}) {
-    return `${nome} ${sobrenome} (Siga em ${instagram})`;
+/*function somar(x, y) {
+    return x + y;
 }
+*/
+/*
+let somar = function(x, y) {
+    return x + y;
+}
+*/
+/*
+let somar = (x, y) => {
+    return x + y;
+}
+*/
+
+let somar = (x, y) => x + y;
+
+let letrasNome = (nome) => nome.length;
 
 
-console.log(pegarNomeCompleto(pessoa));
+
+
+console.log(letrasNome('Igor')); 
 
