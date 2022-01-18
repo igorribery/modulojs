@@ -1,17 +1,3 @@
-function adicionar (nomes, ...novosNomes) {
+let nome = 'Igor';
 
-        let novoConjunto = [
-            ...nomes,
-            ...novosNomes
-        ];
-
-        return novoConjunto;
-}
-
-
-let nomes = ['Bonieky', 'Paulo'];
-
-let outros = adicionar (nomes, 'Antanio', 'Maria', 'José')
-
-console.log(outros);
-
+console.log( nome.repeat(2) );
