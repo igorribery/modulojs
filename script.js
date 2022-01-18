@@ -1,14 +1,13 @@
-let carro = {
-    modelo: 'Hilux',
-    cor: 'Vermelha',
-    ano: 2021,
-    valor: {
-        avista: '200 mil',
-        prazo: '300 mil'
-    }
-   };
+function adicionarInfos(info){
+    
+    let novasInfos = {
+        ...info,
+        cidade: 'Unaí',
+        token: 'HejxznE',
+        email: 'iahe@gmail.com'
+    };
+    return novasInfos;
 
-console.log(Object.keys(carro.valor));
+}
 
-
-
+console.log(adicionarInfos({nome:'Igor', sobrenome:'Ribeiro'}));
