@@ -1,24 +1,17 @@
-/*function somar(x, y) {
-    return x + y;
+function adicionar (nomes, ...novosNomes) {
+
+        let novoConjunto = [
+            ...nomes,
+            ...novosNomes
+        ];
+
+        return novoConjunto;
 }
-*/
-/*
-let somar = function(x, y) {
-    return x + y;
-}
-*/
-/*
-let somar = (x, y) => {
-    return x + y;
-}
-*/
-
-let somar = (x, y) => x + y;
-
-let letrasNome = (nome) => nome.length;
 
 
+let nomes = ['Bonieky', 'Paulo'];
 
+let outros = adicionar (nomes, 'Antanio', 'Maria', 'José')
 
-console.log(letrasNome('Igor')); 
+console.log(outros);
 
