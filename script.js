@@ -1,7 +1,10 @@
-let cartao = '1234123412341234';
+function saudacao(name) {
+    alert('Olá ' +name);
+}
 
-let lastDigits = cartao.slice(-4);
+function retornar(callback) {
+    var name = prompt('Digite seu nome: ');
+    callback(name);
+}
 
-let cartaoMascarado = lastDigits.padStart(16, '*');
-
-console.log('Este é seu cartão com o final? '+cartaoMascarado);
+retornar(saudacao);
