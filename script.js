@@ -1,13 +1,7 @@
-function adicionarInfos(info){
-    
-    let novasInfos = {
-        ...info,
-        cidade: 'Unaí',
-        token: 'HejxznE',
-        email: 'iahe@gmail.com'
-    };
-    return novasInfos;
+let cartao = '1234123412341234';
 
-}
+let lastDigits = cartao.slice(-4);
 
-console.log(adicionarInfos({nome:'Igor', sobrenome:'Ribeiro'}));
+let cartaoMascarado = lastDigits.padStart(16, '*');
+
+console.log('Este é seu cartão com o final? '+cartaoMascarado);
