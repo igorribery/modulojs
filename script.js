@@ -7,7 +7,7 @@ async function loadPosts(){
     montarBlog(json);
 }
 
-function montarBlog(lista){
+const montarBlog = (lista) => {
     let html = '';
 
     for(let i in lista){
