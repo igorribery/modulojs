@@ -1,19 +1,14 @@
-function pegarTemperatura() {
-    return new Promise(function(resolve, reject) {
-        console.log("Pegando temperatura...");
+function loadPosts() {
+    document.getElementById('posts').innerHTML = 'Carregando...';
 
-        setTimeout(function(){
-            resolve('40 na sombra');
-
-        }, 2000);
-    });
+    fetch('https://jsonplaceholder.typicode.com/posts',)
+        .then(function(resultado){
+            return resultado.json();
+        })
+        .then(function(json){
+            document.getElementById('posts').innerHTML = json.length+' posts';
+        })
+        .catch(function(){
+            console.log('Deu error!');
+        })
 }
-
-// USANDO A PROMISE
-let temp = pegarTemperatura();
-temp.then(function(resultado){
-    console.log('TEMPERATURA: '+resultado);
-});
-temp.catch(function(){
-    console.log('Eita, deu erro!');
-})
