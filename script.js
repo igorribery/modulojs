@@ -1,13 +1,8 @@
 function mostrar() {
-    let reader = new FileReader();
     let imagem = document.getElementById('imagem').files[0];
 
-    reader.onloadend = function() {
-        let img = document.createElement('img');
-        img.src = reader.result;
+    let img = document.createElement('img');
+    img.src = URL.createObjectURL(imagem);
 
-        document.getElementById('area').appendChild(img);
-    }
-
-    reader.readAsDataURL(imagem);
+    document.getElementById('area').appendChild(img);
 }
