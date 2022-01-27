@@ -53,8 +53,28 @@ const closeModal = () => {
         qs('.pizzaWindowArea').style.display = 'none';
     }, 500);
 }
-
 qsa('.pizzaInfo--cancelButton, pizzaInfo--cancelMobileButton').forEach((item) => {
     item.addEventListener('click', closeModal);
 })
 
+// botão de mais e menos na quantidade da pizza
+
+qs('.pizzaInfo--qtmenos').addEventListener('click', () =>{
+    if(modalQt >1) {
+    modalQt--;
+    qs('.pizzaInfo--qt').innerHTML = modalQt;
+    }
+});
+qs('.pizzaInfo--qtmais').addEventListener('click', () => {
+    modalQt++;
+    qs('.pizzaInfo--qt').innerHTML = modalQt;
+})
+
+// botão de tamanho da pizza ( pequena - media - grande)
+
+qsa('.pizzaInfo--size').forEach((size, sizeIndex) => {
+    size.addEventListener('click', (e) => {
+        qs('.pizzaInfo--size.selected').classList.remove('selected');
+        size.classList.add('selected');
+    });
+});
