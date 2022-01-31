@@ -110,6 +110,21 @@ qs('.pizzaInfo--addButton').addEventListener('click', () => {
             qt:modalQt
         });
     }
-    
+    updateCart();
     closeModal();
-})
+});
+
+const updateCart = () => {
+    if(cart.length > 0) {
+        qs('aside').classList.add('show');
+        for(let i in cart) {
+
+            let pizzaItem = pizzaJson.find((item) => item.id == cart[i].id);
+            console.log(pizzaItem);
+        }
+
+    } else {
+        qs('aside').classList.remove('show');
+    }
+
+}
