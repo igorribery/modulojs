@@ -117,10 +117,33 @@ qs('.pizzaInfo--addButton').addEventListener('click', () => {
 const updateCart = () => {
     if(cart.length > 0) {
         qs('aside').classList.add('show');
+        qs('.cart').innerHTML = '';
         for(let i in cart) {
-
             let pizzaItem = pizzaJson.find((item) => item.id == cart[i].id);
-            console.log(pizzaItem);
+            let cartItem = qs('.models .cart--item').cloneNode(true);
+
+            let pizzaSizeName;
+            switch (cart[i].size) {
+                case 0:
+                    pizzaSizeName = 'P';
+                    break;
+                case 1:
+                    pizzaSizeName = 'M';
+                    break;
+                case 2:
+                    pizzaSizeName = 'G';
+                    break
+            }
+
+            let pizzaName = `${pizzaItem.name}(${pizzaSizeName})`;
+
+            cartItem.querySelector('img').src = pizzaItem.img;
+            cartItem.querySelector('.cart--item-nome').innerHTML = pizzaName;
+            cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
+
+
+            qs('.cart').append(cartItem);
+            
         }
 
     } else {
