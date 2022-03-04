@@ -9,7 +9,6 @@ let square = {
     b1: '', b2: '', b3: '',
     c1: '', c2: '', c3: ''
 };
-
 let player = '';
 let warning = '';
 let playing = false;
@@ -25,18 +24,18 @@ qsa('.item').forEach((item => {
 
 
 // functions
+const togglePlayer = () => {
+    player = (player === 'x') ? 'o' : 'x';
+    renderInfo();
+}
 
-function itemClick(event) {
-    let item =  event.target.getAttribute('data-item');
+function itemClick(e) {
+    let item = e.target.getAttribute('data-item');
     if(playing && square[item] === '') {
         square[item] = player;
         renderSquare();
         togglePlayer();
     }
-}
-function togglePlayer() {
-    player = (player === 'x') ? 'o' : 'x';
-    renderInfo();
 }
 
 function reset() {
@@ -52,14 +51,13 @@ function reset() {
 
     renderSquare();
     renderInfo();
-
 }
+
 function renderSquare() {
     for(let i in square) {
         let item = qs(`div[data-item=${i}]`);
         item.innerHTML = square[i];
     }
-
     checkGame();
 }
 
@@ -70,10 +68,10 @@ function renderInfo() {
 
 function checkGame() {
     if(checkWinnerFor('x')) {
-        warning = 'O "x" venceu!';
+        warning = 'O "x" ganhou!';
         playing = false;
     } else if(checkWinnerFor('o')) {
-        warning = 'O "o" venceu!';
+        warning = 'O "o" ganhou!';
         playing = false;
     } else if(isFull()) {
         warning = 'Deu empate!';
@@ -98,11 +96,12 @@ function checkWinnerFor(player) {
     for(let w in pos) {
         let pArray = pos[w].split(',');
         let hasWon = pArray.every(option => square[option] === player);
-            if(hasWon) {
-                return true;
-            }
-     }
+        if(hasWon) {
+            return true;
+        }
+    }
     return false;
+
 }
 
 function isFull() {
@@ -113,3 +112,6 @@ function isFull() {
     }
     return true;
 }
+
+
+
